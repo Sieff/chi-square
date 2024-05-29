@@ -23,7 +23,7 @@ const data: DistributionData = {
 
 const distribution: Distribution = new Distribution(data);
 
-// Run chi-square test with 5% Uncertainty 
+// Run chi-square test with 5% uncertainty 
 const result: ChiSquareTestResult = chiSquare(distribution, 0.05);
 
 console.log(result);
