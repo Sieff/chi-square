@@ -42,6 +42,12 @@
  * Artistic License or the GPL v1 or later.
  */
 
+/**
+ * Function to calculate chi-square critical values.
+ *
+ * @param alpha Significance level of chi-square test
+ * @param dof Degrees of freedom of chi-square test
+ */
 function chiSquareCriticalValue (alpha: number, dof: number): number {
     if (dof <= 0 || Math.abs(dof) - Math.abs(integer(dof)) !== 0) {
         throw(Error("Invalid degree of freedom\n"));

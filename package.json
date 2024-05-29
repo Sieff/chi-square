@@ -1,6 +1,6 @@
 {
   "name": "@steffen-f3/chi-square",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A package to execute a Chi-Square Test with some additional metrics.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
