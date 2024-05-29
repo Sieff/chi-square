@@ -1,5 +1,5 @@
-import {chiSquare, ChiSquareTestResult} from "../../src/services/ChiSquareService";
-import {Distribution, DistributionData} from "../../src/models/Distribution";
+import {chiSquare, ChiSquareTestResult} from "../../src";
+import {Distribution, DistributionData} from "../../src";
 
 let data: DistributionData;
 

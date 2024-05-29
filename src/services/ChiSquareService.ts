@@ -4,18 +4,6 @@ import {chiSquareCriticalValue} from "../util/chiSquareCriticalValue";
 
 export interface ChiSquareTestResult {
     /**
-     * Row names from data
-     */
-    rows: string[];
-    /**
-     * Column names from data
-     */
-    columns: string[];
-    /**
-     * Contingency Matrix with original data
-     */
-    data: number[][];
-    /**
      * Calculated Chi-Square value from data
      */
     calculatedChiSquareValue: number;
@@ -62,9 +50,6 @@ function chiSquare(dist: Distribution, alpha: number = 0.05): ChiSquareTestResul
     const rowImpact = rowImpactRating(dist);
 
     return {
-        rows: dist.rows,
-        columns: dist.columns,
-        data: dist.data,
         calculatedChiSquareValue,
         criticalChiSquareValue,
         significanceLevel: alpha,

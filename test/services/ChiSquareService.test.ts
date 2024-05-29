@@ -1,4 +1,4 @@
-import {Distribution, DistributionData} from "../../src/models/Distribution";
+import {Distribution, DistributionData} from "../../src";
 import {chiSquare, chiSquareTestValue, chiSquareValue, expectedValues} from "../../src/services/ChiSquareService";
 
 let data: DistributionData;
