@@ -28,3 +28,15 @@ const result: ChiSquareTestResult = chiSquare(distribution, 0.05);
 
 console.log(result);
 ```
+
+## Development
+
+### Testing
+
+    npm run test
+
+### Deployment
+
+1. Bump version number in package.json
+2. Run build script
+3. Publish via npm
