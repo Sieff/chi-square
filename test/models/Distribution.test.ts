@@ -1,4 +1,4 @@
-import {Distribution, DistributionData} from "../../src/models/Distribution";
+import {Distribution, DistributionData} from "../../src";
 
 let data: DistributionData;
 let dist: Distribution;

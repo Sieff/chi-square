@@ -10,7 +10,7 @@ This package contains functions to calculate Chi-Square critical values as well 
 
 ```js
 
-import {chiSquare, DistributionData, Distribution, ChiSquareTestResult} from "@steffen-f3/chi-square";
+import {chiSquare, DistributionData, Distribution, ChiSquareTestResult, chiSquareCriticalValue} from "@steffen-f3/chi-square";
 
 const data: DistributionData = {
     rows: ['row1', 'row2'],
@@ -27,6 +27,12 @@ const distribution: Distribution = new Distribution(data);
 const result: ChiSquareTestResult = chiSquare(distribution, 0.05);
 
 console.log(result);
+
+// Get critical value for significance level 0.05 and 1 degree of freedom. 
+const criticalValue = chiSquareCriticalValue(0.05, 1);
+
+// ~3.841
+console.log(criticalValue)
 ```
 
 ## Development
