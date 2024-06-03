@@ -8,7 +8,7 @@ export interface ChiSquareTestResult {
      */
     calculatedChiSquareValue: number;
     /**
-     * Critical Chi-Square value from CDF
+     * Critical Chi-Square value for significance level and dof
      */
     criticalChiSquareValue: number;
     /**
