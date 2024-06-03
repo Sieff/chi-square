@@ -48,4 +48,137 @@ test('should get degrees of freedom', () => {
     expect(dist.degreesOfFreedom()).toEqual(4);
 });
 
+test('should throw error for invalid data (negative values)', () => {
+    data = {
+        rows: ["row1", "row2"],
+        columns: ["good", "bad"],
+        data: [
+            [-1, 10],
+            [10, 10],
+        ]
+    };
+
+    const testCall = () => {
+        return new Distribution(data);
+    }
+
+    expect(testCall).toThrow(Error);
+});
+
+test('should throw error for invalid data (rows mismatch)', () => {
+    data = {
+        rows: ["row1", "row2"],
+        columns: ["good", "bad"],
+        data: [
+            [10, 10],
+        ]
+    };
+
+    const testCall = () => {
+        return new Distribution(data);
+    }
+
+    expect(testCall).toThrow(Error);
+});
+
+test('should throw error for invalid data (column mismatch)', () => {
+    data = {
+        rows: ["row1", "row2"],
+        columns: ["good", "bad"],
+        data: [
+            [10],
+            [10],
+        ]
+    };
+
+    const testCall = () => {
+        return new Distribution(data);
+    }
+
+    expect(testCall).toThrow(Error);
+});
+
+test('should throw error for invalid data (unequal rows)', () => {
+    data = {
+        rows: ["row1", "row2"],
+        columns: ["good", "bad"],
+        data: [
+            [10, 10],
+            [10],
+        ]
+    };
+
+    const testCall = () => {
+        return new Distribution(data);
+    }
+
+    expect(testCall).toThrow(Error);
+});
+
+
+test('should throw error for invalid data (no data)', () => {
+    data = {
+        rows: [],
+        columns: [],
+        data: [
+        ]
+    };
+
+    const testCall = () => {
+        return new Distribution(data);
+    }
+
+    expect(testCall).toThrow(Error);
+});
+
+
+test('should throw error for invalid data (no columns)', () => {
+    data = {
+        rows: ["row1", "row2"],
+        columns: [],
+        data: [
+            [],
+            []
+        ]
+    };
+
+    const testCall = () => {
+        return new Distribution(data);
+    }
+
+    expect(testCall).toThrow(Error);
+});
+
+
+test('should throw error for invalid data (no rows)', () => {
+    data = {
+        rows: [],
+        columns: ["column1", "column2"],
+        data: [
+        ]
+    };
+
+    const testCall = () => {
+        return new Distribution(data);
+    }
+
+    expect(testCall).toThrow(Error);
+});
+
+test('should not throw error for minimal valid data', () => {
+    data = {
+        rows: ["row1"],
+        columns: ["good"],
+        data: [
+            [0],
+        ]
+    };
+
+    const testCall = () => {
+        return new Distribution(data);
+    }
+
+    expect(testCall).not.toThrow(Error);
+});
+
 export {};
