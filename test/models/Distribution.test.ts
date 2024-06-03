@@ -65,6 +65,23 @@ test('should throw error for invalid data (negative values)', () => {
     expect(testCall).toThrow(Error);
 });
 
+test('should throw error for invalid data (NaN values)', () => {
+    data = {
+        rows: ["row1", "row2"],
+        columns: ["good", "bad"],
+        data: [
+            [NaN, 10],
+            [10, 10],
+        ]
+    };
+
+    const testCall = () => {
+        return new Distribution(data);
+    }
+
+    expect(testCall).toThrow(Error);
+});
+
 test('should throw error for invalid data (rows mismatch)', () => {
     data = {
         rows: ["row1", "row2"],
