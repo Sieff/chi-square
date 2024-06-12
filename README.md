@@ -1,3 +1,9 @@
+### ⚠️🚨 Deprecation Notice 🚨⚠️ 
+
+**This package has been deprecated and moved to [`@folge3/chi-square`](https://www.npmjs.com/package/@folge3/chi-square).** \
+Please update your dependencies and switch to the new package to continue receiving updates and support.
+Thank you for your understanding!
+
 # Chi-Square
 
 This package contains functions to calculate Chi-Square critical values as well as performing a Chi-Square statistical test.
